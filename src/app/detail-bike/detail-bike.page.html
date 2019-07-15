@@ -9,14 +9,18 @@
 
 <ion-content>
 
-<ion-item padding = "block">
+<ion-item padding>
 
-  <ion-card>
-      <ion-avatar >
-          <img style="text-align: center" [src]="accountInfo.image" />
+      <ion-avatar style="width:100% !important; height : 100% !important; max-width: 150px !important;max-height: 150px">
+          <img style="text-align: center" [src]="bike_detail[0].image" />
       </ion-avatar>
-  </ion-card>
+</ion-item>
 
+<ion-item>
+    <ion-label padding>{{ bike_detail[0].name }}</ion-label>
+  
+      
+    <p><ion-label padding>{{ bike_detail[0].name }}</ion-label></p>
 </ion-item>
 
 </ion-content>
