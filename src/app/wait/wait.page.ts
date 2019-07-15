@@ -1,26 +1,21 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
-import { IonicModule } from '@ionic/angular';
 
-import { WaitPage } from './wait.page';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: WaitPage
-  }
-];
-
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [WaitPage]
+@Component({
+  selector: 'app-wait',
+  templateUrl: './wait.page.html',
+  styleUrls: ['./wait.page.scss'],
 })
-export class WaitPageModule {}
+export class WaitPage implements OnInit {
+
+  constructor(private nav: NavController) {
+    
+   }
+
+  ngOnInit() {
+  }
+  waitClick(){
+    this.nav.navigateForward("/detail-bike");
+  }
+}
