@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
-@Component({
-  selector: 'app-wait',
-  templateUrl: './wait.page.html',
-  styleUrls: ['./wait.page.scss'],
-})
-export class WaitPage implements OnInit {
+import { IonicModule } from '@ionic/angular';
 
-  constructor() { }
+import { WaitPage } from './wait.page';
 
-  ngOnInit() {
+const routes: Routes = [
+  {
+    path: '',
+    component: WaitPage
   }
+];
 
-}
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [WaitPage]
+})
+export class WaitPageModule {}
